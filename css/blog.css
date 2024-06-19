@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #ff6347;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffa07a;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #c70e0e;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img { /* Logo Height*/
+    height: 90px;
+    margin-right: 10px;
+}
+
+header .logo .chapter-name {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+header nav ul li a { /* Navegation bar */
+    color: #ffffff;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+    
+
+.blog-post {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s ease forwards; /* Fade in animation */
+}
+
+.blog-post.visible {
+    opacity: 1; /* Visible */
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #ff4444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
