@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/images/LOGO.png" alt="AWS Logo">
+                <span class="chapter-name">BLOG</span> <!-- You may need to adjust spacing here -->
+                <nav>
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#search"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Blog content goes here -->
+        <h1>Welcome to Our Blog</h1>
+        <p>This is where you can find all our latest blog posts.</p>
+        <!-- Example blog posts -->
+        <div class="blog-post">
+            <img src="/images/event1.jpg" alt="hello" width="550">
+            <h2>FABTECH MTY Visit</h2>
+            <p>Content of the blog post goes here.</p>
+            <p>Published on: <time datetime="2024-05-30">May 30, 2024</time></p>
+        </div>
+        <div class="blog-post">
+            <img src="/images/about2.jpg" width="550">
+            <h2>Student Chapter attends AWS Seminar</h2>
+            <p>Content of the blog post goes here.</p>
+            <p>Published on: <time datetime="2024-05-31">May 31, 2024</time></p>
+        </div>
+        <!-- Additional posts hidden by default -->
+        <div class="blog-post hidden">
+            <img src="/images/committee.jpg" alt="Twilight" width="550">
+            <h2>Visit at Twilight SA de CV </h2>
+            <p>Content of the blog post goes here.</p>
+            <p>Published on: <time datetime="2024-06-01">June 1, 2024</time></p>
+        </div>
+        <div class="blog-post hidden">
+            <h2>Blog Post Title 4</h2>
+            <p>Content of the blog post goes here.</p>
+            <p>Published on: <time datetime="2024-06-02">June 2, 2024</time></p>
+        </div>
+        <!-- Button to toggle visibility of additional posts -->
+        <button id="see-more-btn">See More</button>
+    </div>
+
+    <!-- Your footer section here -->
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; 2024 Your Blog Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optionally, include any JavaScript files here -->
+    <script>
+        document.getElementById('see-more-btn').addEventListener('click', function() {
+            var additionalPosts = document.querySelectorAll('.blog-post.hidden');
+            additionalPosts.forEach(function(post) {
+                post.classList.toggle('hidden');
+            });
+            // Change button text based on visibility
+            this.textContent = additionalPosts[0].classList.contains('hidden') ? 'See More' : 'See Less';
+        });
+    </script>
+</body>
+</html>
